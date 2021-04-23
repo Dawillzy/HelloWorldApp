@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var counter = 0
-        val btn: Button = findViewById(R.id.button)
+        val increment: Button = findViewById(R.id.increment)
+        val decrement: Button = findViewById(R.id.decrement)
         val txt: TextView = findViewById(R.id.number)
         val rst: ImageButton = findViewById(R.id.reset)
 
@@ -24,10 +25,15 @@ class MainActivity : AppCompatActivity() {
             txt.setText(counter.toString())
         }
 
-        btn.setOnClickListener{
+        increment.setOnClickListener{
             counter++
             txt.setText(counter.toString())
 
+        }
+
+        decrement.setOnClickListener{
+            counter--
+            txt.setText(counter.toString())
         }
     }
 }
